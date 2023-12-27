@@ -8,13 +8,13 @@
     
     - 관계형(Relational) 데이터베이스다
     1. 가장 대표적인 데이터베이스 시스템
-    2. 데이터를 테이블 형태로 저장하고 여러 테이블을 조합하여
+    2. 데이터를 테이블 형태로 저장하고departmentdepartmentdepartment 여러 테이블을 조합하여
        비즈니스 관계를 도출하는 구조
     3. 데이터의 중복을 최소화할 수 있으며 사용하기 편리하고
        데이터의 무결성, 트랜잭션 처리 등 데이터베이스 관리 시스템으로
 	   뛰어난 성능을 보여준다.
        
-	- SQL(Structured Query Language)alter
+	- SQL(Structured Query Language)
         : 관계형 데이터베이스에서 데이터를 조회하거나 조작하기 위해
           사용하는 표준 검색 언어
     - SQL 종류
@@ -73,8 +73,8 @@ FROM employee;
      산술 연산자를 사용하여 결과를 조회할 수 있다.
 */
 
--- employee 테이블에서 직원명(emp_name), 직원 연봉 조회alter
-SELECT emp_name, salary, salary * 12
+-- employee 테이블에서 직원명(emp_name), 직원 연봉 조회
+SELECT emp_name, salary, salary * 12 "연봉"
 FROM employee;
 
 /*
@@ -86,7 +86,7 @@ FROM employee;
 	- 별칭을 부여할때 띄어쓰기 혹은 특수문자가 포함될 경우
 	  반드시 큰따옴표("")로 감싸줘야 한다.
 */
--- employee 테이블에서 직원명(emp_name), 직원 연봉(salary *  12) 조회alter
+-- employee 테이블에서 직원명(emp_name), 직원 연봉(salary *  12) 조회
 SELECT emp_name as 직원명, 
 	   salary 월급, 
        salary * 12 as "연봉"
@@ -154,7 +154,7 @@ WHERE dept_code = 'D1';
 -- 1.부서코드 'D1'이 아닌 사원들의 
 -- 사원명(emp_id), 사원명(emp_name), 부서코드만 조회
 
-SELECT emp_id, emp_name
+SELECT emp_id, emp_name, dept_code
 FROM employee
 WHERE dept_code <> 'D1';
 
@@ -167,7 +167,7 @@ WHERE salary >= 4000000;
 -- 4. 재직중(ent_yn 컬럼값이 'N')인 사원들의
 -- 사번, 사원명, 입사일(hire_date) 조회
 
-SELECT emp_name, hire_date
+SELECT emp_name, hire_date, ent_yn
 FROM employee
 WHERE ent_yn = 'N';
 
