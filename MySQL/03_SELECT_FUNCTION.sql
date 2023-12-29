@@ -318,7 +318,7 @@ SELECT emp_name, hire_date
         COALESCE|IFNULL(값, 값이 NULL일 경우 반환할 값)
     */
     
-    SELECT emp_name, bonus, coalesce(bonus, 0)
+    SELECT emp_name, bonus, coalesce(bonus, 0) 
     FROM employee;
     
     -- 전 사원의 직원명, 보너스, 보너스 포함 연봉 조회(급여 + 급여 * 보너스) *12 조회
