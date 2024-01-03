@@ -21,8 +21,14 @@
       1 . DML(Data Manipulation Language) : 데이터 조작어
           - 실제 데이터를 조작하기 위해 사용하는 언어
             (INSERT : 추가 , UPDATE : 수정,  DELETE : 삭제, SELECT)
-      2  . DQL(Data Query Language) : 데이터 질의어
-           - 데이터를 조회(검색)하기 위해 사용하는 언어(SELECT)
+      2 . DQL(Data Query Language) : 데이터 질의어
+		- 데이터를 조회(검색)하기 위해 사용하는 언어(SELECT)
+	  3 . DCL(DATE CONTROL LANGUAGE) : 테이터 제어어
+		  - DBMS에 대한 보안, 무결성, 복구 등 DBMS를 제어하기 위한 언어
+          (GRANT : 권한 부여, REVOKE : 권한 회수)
+	  4 . DDL(DATE DEFINITION LANGUAGE) : 데이터 정의어
+         - DBMS의 구조를 정의하거나 변경, 삭제하기 위해 사용하는 언어
+         (CREATE : 생성, ALTER : 수정, DROP : 삭제) - 테이블 변경과 관련
 */
 /*
 	SELECT 컬럼,[컬럼, ....]

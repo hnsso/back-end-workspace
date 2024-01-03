@@ -28,17 +28,24 @@ WHERE first_name = 'TRACY';
 
 SELECT * FROM film; -- 영화 정보 : film_id
 SELECT * FROM actor; -- 영화 배우 정보 : actor_id
-SELECT * FROM film_actor; -- film과 actor 연결 : film_id, actor_id
+
 
 SELECT first_name, last_name, title 
-FROM film
-JOIN film_actor  USING (film_id)
-JOIN actor USING (actor_id)
-WHERE first_name = 'JULIA ' AND last_name = 'MCQUEEN' ;
+FROM film f, actor a
+WHERE f.film_id = a.actor_id
+AND first_name = 'JULIA'
+AND last_name = 'MCQUEEN';
 
-
+SELECT * FROM film; -- 영화 정보 : film_id
+SELECT * FROM actor; -- 영화 배우 정보 : actor_id
 
 -- 3. 영화 NOON PAPI에 나오는 배우들의 이름 조회
+SELECT first_name, last_name
+FROM film f, actor a
+WHERE f.film_id = a.actor_id
+
+
+
 
 -- 4. 각 카테고리별 이메일이 JOYCE.EDWARDS@sakilacustomer.org인 고객이 빌린 DVD 대여 수 조회 
 
