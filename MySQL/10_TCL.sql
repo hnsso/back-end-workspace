@@ -2,7 +2,7 @@
 	TCL(Transaction Control Language)
     - 트랜잭션을 제어하는 언어
     - 데이터베이스는 데이터의 변경 사항(INSERT, UPDATE, DELETE)들을 
-		묶어서 하나의 트랜잭션에 담아서 처리
+	  묶어서 하나의 트랜잭션에 담아서 처리
 
 	트랜잭션(Transaction)
     - 하나의 논리적인 작업 단위 !
@@ -46,7 +46,6 @@ AS SELECT emp_id, emp_name, dept_code, salary, bonus
 FROM kh.employee;
 
 SELECT * FROM dept_copy;
-
 -- dept_copy 테이블에서 dept_id가 'D9'인 부서명을 '전략기획팀'으로 수정
 -- UPDATE 테이블 SET 변경할내용 WHERE 조건;
 UPDATE dept_copy

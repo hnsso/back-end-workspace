@@ -11,6 +11,7 @@ CREATE TABLE tb_publisher(
     pub_name VARCHAR(20) NOT NULL,
     phone VARCHAR(20)
 );
+INSERT INTO tb_publisher(pub_name, phone) VALUES('천그루숲');
 
 -- 2. 도서들에 대한 데이터를 담기 위한 도서 테이블 (tb_book)
 --    컬럼 : bk_no (도서번호) -- 기본 키
@@ -27,7 +28,7 @@ CREATE TABLE tb_book(
     bk_price INT,
     pub_no INT
 );
-
+ALTER TABLE tb_book ADD FOREIGN KEY (pub_no) REFERENCES tb_publisher(pub_no)
 
 -- 3. 회원에 대한 데이터를 담기 위한 회원 테이블 (tb_member)
 --    컬럼 : member_no(회원번호) -- 기본 키
@@ -66,6 +67,14 @@ CREATE TABLE tb_rent(
     bk_no INT,
     rent_date DATE DEFAULT (current_date()) 
 );
+ALTER TABLE tb_rent ADD CONSTRAINT member_no_fk 
+					FOREIGN KEY(member_no) REFERENCES tb_member(member_no);
+
+ALTER TABLE tb_rent ADD CONSTRAINT bk_no_fk
+					FOREIGN KEY(bk_no) REFERENCES tb_member(bk_no);
+
+
+
 
 INSERT INTO tb_rent VALUES(1, 1, 2, default);
 INSERT INTO tb_rent VALUES(2, 1, 3, default);
@@ -76,3 +85,9 @@ INSERT INTO tb_rent VALUES(5, 1, 5, default);
 -- 5. 2번 도서를 대여한 회원의 이름, 아이디, 대여일, 반납 예정일(대여일 + 7일)을 조회하시오.
 
 -- 6. 회원번호가 1번인 회원이 대여한 도서들의 도서명, 출판사명, 대여일, 반납예정일을 조회하시오.
+SELECT bk_title "도서명",
+		pub_name "출판사명",
+        rent_date ""
+FROM tb_rent
+	JOIN tb_book USING (bk_no)
+    JOIN tb_publisher USING (pub_no)
