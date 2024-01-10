@@ -37,6 +37,7 @@ public class C_Printf {
 		System.out.println("--------------------------------");
 		
 		double dNum1 = 1.23456789;
+		
 		double dNum2 = 4.53;
 		
 		System.out.printf("%f\t%f\n", dNum1, dNum2); // 무조건 소수점 아래 6번째 짜리까지

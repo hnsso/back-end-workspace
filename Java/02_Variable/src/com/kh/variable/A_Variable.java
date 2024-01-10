@@ -12,8 +12,8 @@ public class A_Variable {
 		A_Variable variable = new A_Variable();
 
 		// 생성한 클래스로 메소드 실행(호출)
-//		variable.printValue();
-		// variable.variableTest();
+		variable.printValue();
+		variable.variableTest();
 		variable.constant();
 	}
 
@@ -73,14 +73,14 @@ public class A_Variable {
 		byte bNum = 1; // 1byte(-128 ~ 127) 256 = 2^8
 		// bNum = 128; 에러 발생! -> 오버플로우(Overflow)
 		short sNum = 128; // 2byte 
-		int iNum = 922337283; // 4byte (기본)
+		int iNum = 922337283; // 4byte (기본) !!!!!!!!!!!
 		long lNum = 922337283458L; // 8byte - 숫자 뒤에 L(l)을 입력
 		
 		System.out.println(lNum);
 		
 		// 4. 실수형
 		float fNum = 1.2F; // 4byte - 숫자 뒤에 F(f)를 입력 
-		double dNum = 1.2; // 8byte (기본)
+		double dNum = 1.2; // 8byte (기본) !!!!!!!!!!!
 		
 		System.out.println(fNum);
 		

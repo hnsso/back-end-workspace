@@ -3,6 +3,8 @@ package com.kh.variable;
 import java.util.Scanner;
 
 public class D_Scanner {
+	 
+	
 	
 	/*
 	 * Scanner 
@@ -16,14 +18,14 @@ public class D_Scanner {
 	 * 3. Scanner 메서드 사용 
 	 *    입력값이
 	 *    - 문자열일 때 : sc.next() - 공백이 있을 경우 공백 이전까지 
-	 *                  sc.nextLine() - 공백 포함 엔터 전까지 --> 얘만 사용하는 것을 권장 
+	 *             !v! sc.nextLine() - 공백 포함 엔터 전까지 --> 얘만 사용하는 것을 권장 
 	 *    - 정수일 때 : sc.nextInt()
 	 *    - 실수일 때 : sc.nextFloat(), sc.nextDouble()
 	 * */
 
 	public static void main(String[] args) {
 		
-		Scanner sc = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in);		
 		
 		System.out.print("당신의 이름은 무엇입니까? > ");
 		String name = sc.next(); // enter 처리 X

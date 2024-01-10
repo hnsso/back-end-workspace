@@ -11,7 +11,7 @@ public class B_Casting {
 	public static void main(String[] args) {
 
 		B_Casting b = new B_Casting();
-		//b.autoCasting();
+		b.autoCasting();
 		b.casting();
 	}
 	
@@ -23,12 +23,12 @@ public class B_Casting {
 		// 정수
 		byte b = 10; // 1byte
 		short s = b; // 2byte : byte -> short 
-		int i = s; // 4byte : short -> int 
+		int i = s; // 4byte : short -> int  !!!
 		long l = i; // 8byte : int -> long
 		
 		// 실수 
 		float f = 1; // 4byte
-		double d = f; // 8byte : float -> double
+		double d = f; // 8byte : float -> double !!
 		
 		d = i; // int -> double
 		
@@ -90,13 +90,5 @@ public class B_Casting {
 		char ch = 52143;
 		System.out.println(ch); // 52143 -> 쮯
 	}
-	
-	
-	
-	
-	
-	
-	
-	
 
 }
