@@ -14,7 +14,7 @@ public class B_Casting {
 		b.autoCasting();
 		b.casting();
 	}
-	
+
 	/*
 	 * 자동 형 변환(묵시적 형 변환)
 	 * - 자동으로 형 변환이 이루어지기 때문에 따로 형 변환하지 않아도 된다.

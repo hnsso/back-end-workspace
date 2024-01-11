@@ -119,7 +119,7 @@ FROM employee;
 -- replace, concat, rpad, substr
 SELECT emp_name,
        -- substr(emp_no, 시작위치(-6), 추출할문자개수)  
-      replace(emp_no, substr(emp_no, 9, 6),'******')
+      replace(emp_no, substr(emp_no, 9, 6),'******')주민등록번호
 FROM employee;
 
 -- rpad(substr(emp_no,1,8) , 14, '*')
@@ -300,7 +300,7 @@ SELECT emp_name, hire_date
         FORMAT(숫자, 위치) : 숫자에 3단위씩 콤마 추가해서 반환
         DATE_FORMAT(날짜, 포맷 형식) : 날짜 형식을 변경해서 반환
     */
-    SELECT emp_name, salary, format(salary, 2)
+    SELECT emp_name, salary, format(salary, 0)
     FROM employee;
     
     SELECT now(), date_format(now(),'%Y.%m.%d');
@@ -318,7 +318,7 @@ SELECT emp_name, hire_date
         COALESCE|IFNULL(값, 값이 NULL일 경우 반환할 값)
     */
     
-    SELECT emp_name, bonus, coalesce(bonus, 0) 
+    SELECT emp_name, coalesce(bonus, 0) bonus
     FROM employee;
     
     -- 전 사원의 직원명, 보너스, 보너스 포함 연봉 조회(급여 + 급여 * 보너스) *12 조회
@@ -326,7 +326,7 @@ SELECT emp_name, hire_date
     -- (salary + salary * bonus)*12 "연봉" 
     SELECT emp_name, 
 		   ifnull(bonus, 0), 
-		   (salary + salary * ifnull(bonus, 0)* 12) "연봉"
+		   format((salary + salary * ifnull(bonus, 0)* 12),0) "연봉"
 	FROM employee;
     
     
@@ -384,7 +384,7 @@ SELECT emp_name,
 				) 	
 			) "인상된 급여"
 FROM employee
-ORDER BY job_code, 4 DESC "인상된 급여" ;    
+ORDER BY job_code 4 DESC "인상된 급여" ;    
 
 /*
 	CASE WHEN 조건식 1 THEN 결과값 1

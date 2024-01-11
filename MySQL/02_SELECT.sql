@@ -8,7 +8,7 @@
     
     - 관계형(Relational) 데이터베이스다
     1. 가장 대표적인 데이터베이스 시스템
-    2. 데이터를 테이블 형태로 저장하고departmentdepartmentdepartment 여러 테이블을 조합하여
+    2. 데이터를 테이블 형태로 저장하고 department department department 여러 테이블을 조합하여
        비즈니스 관계를 도출하는 구조
     3. 데이터의 중복을 최소화할 수 있으며 사용하기 편리하고
        데이터의 무결성, 트랜잭션 처리 등 데이터베이스 관리 시스템으로
@@ -182,9 +182,10 @@ WHERE ent_yn = 'N';
 -- OR(또는), AND(그리고)
 -- 부서코드가 'D6'이거나 급여가 300만원 이상인
 -- 사원들의 사원명, 부서코드, 급여 조회
-SELECT emp_nmae, dept_code, salary
+SELECT emp_name, dept_code, salary
 FROM employee
-WHERE dept_code = 'D6' or salary >= 3000000;
+WHERE dept_code = 'D6' 
+or salary >= 3000000;
 
 
 
@@ -257,7 +258,7 @@ WHERE phone LIKE '__1%';
 -- 논리부정연산자 : NOT (어느 위치에서든 가능)
 SELECT emp_id, emp_name, email
 FROM employee
-WHERE email NOT LIKE '___$_%' ESCAPE '$';
+WHERE email LIKE '___$_%' ESCAPE '$';
 
 /*
   IS NULL / IS NOT NULL
@@ -305,7 +306,8 @@ WHERE dept_code IN('D6','D5','D8');
 --    200만원 이상인 사원들의 모든 컬럼 조회
 SELECT *
 FROM employee
-WHERE job_code IN('J7','J2') AND salary >= 2000000;
+WHERE job_code IN('J7','J2') 
+AND salary >= 2000000;
 
 
 -- 2. 사수가 없고 부서배치도 받지 않은 사원들의 
@@ -360,7 +362,7 @@ AND emp_name LIKE '%하%' ;
 SELECT emp_name, bonus
 FROM employee
 -- ORDER BY bonus; -- 보너스 기준 오름차순 정렬(null이 맨앞)
-ORDER BY 2 DESC -- 보너스 기준 내림차순 정렬(null이 맨뒤)
+ORDER BY 2 DESC ;-- 보너스 기준 내림차순 정렬(null이 맨뒤)
 
 /*
 LIMIT
@@ -382,7 +384,7 @@ LIMIT 5;
 SELECT emp_name, salary
 FROM employee
 ORDER BY salary DESC 
-LIMIT 5, 10;
+LIMIT 5, 10; 
 
 
 SELECT emp_name, salary

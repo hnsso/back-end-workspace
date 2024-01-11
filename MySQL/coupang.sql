@@ -24,7 +24,7 @@ CREATE TABLE enterprise(
     company VARCHAR(50), -- 업체명
     address VARCHAR(100), -- 업체 주소
     regist_number VARCHAR(50), -- 사업자 등록번호
-    company_phone VARCHAR(50),
+    company_phone VARCHAR(50)
 ); -- 업체
 
 CREATE TABLE customer(
@@ -103,7 +103,7 @@ CREATE TABLE choice(
 ); -- 오션
 
 ALTER TABLE category 
-ADD FOREIGN KEY (parnet_code) REFERENCES category(cate_code);
+ADD FOREIGN KEY (parent_code) REFERENCES category(cate_code);
 
 ALTER TABLE product
 ADD FOREIGN KEY (ente_id) REFERENCES enterprise(ente_id);
@@ -148,8 +148,7 @@ ALTER TABLE choice
 ADD FOREIGN KEY (prod_code) REFERENCES product(prod_code);
 
 
-
-
+ROLLBACK;
 
 
 
