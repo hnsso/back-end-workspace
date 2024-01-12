@@ -35,7 +35,7 @@ public class OperatorPractice {
 		int num1 = sc.nextInt();
 		int num2 = sc.nextInt();
 		
-		String result = (num1 = 432 = 400) || (num2 = 111 = 100); 
+		// String result = (num1 = 432 = 400) || (num2 = 111 = 100); 
 		System.out.println();
 		
 	}
@@ -77,7 +77,7 @@ public class OperatorPractice {
 	//필요한 바구니의 수를 출력하세요
 	public void method6() {
 		System.out.println("사과의 개수");
-		int 
+		// int 
 		
 		System.out.println("바구니의 크기");
 	}
