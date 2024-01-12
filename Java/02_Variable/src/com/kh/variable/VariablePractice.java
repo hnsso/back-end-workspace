@@ -23,7 +23,3 @@ Scanner sc = new Scanner(System.in);
 		
 	}
 }
-
-	public void method1() {
-	
-	}
