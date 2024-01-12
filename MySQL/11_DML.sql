@@ -18,6 +18,7 @@
 		- VALUES 대신 서브쿼리 조회한 결과값이 통째로 INSERT 한다. 
         - 서브쿼리 결과값이 INSERT 문에 지정된 테이블 컬럼 개수와 같아야 한다. 
 */
+
 -- 사용할 테이블 생성
 CREATE TABLE emp(
 	emp_id INT PRIMARY KEY,

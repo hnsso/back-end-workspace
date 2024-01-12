@@ -110,6 +110,8 @@ CREATE TABLE mem_unique(
     mem_date DATE
 );
 
+
+
 INSERT INTO mem_unique VALUES(1, 'user01', 'pass01', '정대윤', null, null, null, null);
 INSERT INTO mem_unique VALUES(2, 'user01', 'pass02', '권예빈', null, null, null, null);
 -- > unique 제약조건에 위배되어 insert 실패! 
