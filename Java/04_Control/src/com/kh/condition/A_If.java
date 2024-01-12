@@ -18,6 +18,10 @@ public class A_If {
 
 		// 입력받은 성적이 60점 이상이면 "합격입니다"를 출력
 
+		
+		
+		
+		
 		System.out.println("성적을 입력 : ");
 //		int score = sc.nextInt()
 		int score = Integer.parseInt(sc.nextLine());

@@ -2,11 +2,27 @@ package com.kh.practice;
 
 import java.util.Scanner;
 
+import com.kh.condition.B_Switch;
+
 public class ConditionPractice {
 	Scanner sc = new Scanner(System.in);
     
 	public static void main(String[] args) {
-
+		
+		ConditionPractice c = new ConditionPractice();
+		
+		c.practice1();
+		c.practice2();
+		c.practice3();
+		c.practice4();
+		c.practice5();
+		c.practice6();
+		c.practice7();
+		c.practice8();
+		c.practice9();
+		c.practice10();
+		c.practice11();
+		
 	}
 
     /*
@@ -17,6 +33,9 @@ public class ConditionPractice {
        양수만 입력해주세요.
      */
     public void practice1() {
+    	
+    	System.out.println("정수를 입력 > ");
+    	int number = sc.nextLine()
     	
     }
 
