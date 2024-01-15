@@ -11,15 +11,28 @@ Scanner sc = new Scanner(System.in);
 	public static void main(String[] args) {
 		VariablePractice v = new VariablePractice() ;
 		v.method1();
+		v.method2();
+		v.method3();
+		
 	}
 	
 	
 	public void method1() {
 		int b= 10000;
 		int s = 7000;		
+	
+		int adultprice = 100000
+		int teenPrice = 7000
+		int adultCount = 2
+		int teenCount = 3
 		
-		System.out.println("성인 2명");
+		int adultTotal = adultPrice * adultCount;
+		int teenTotal = teenPrice * teenCount
+				
+		
+		System.out.println("성인 %d명" : %d원\n, adultCount, adultTotal );
 	
 		
 	}
 }
+
