@@ -41,6 +41,7 @@ public class D_Scanner {
 		double height = sc.nextDouble(); // enter X
 		sc.nextLine(); // enter 
 		
+		
 		System.out.print("당신의 성별은 무엇입니까? (남/여) > ");
 		String input = sc.nextLine();
 		char gender = input.charAt(0);

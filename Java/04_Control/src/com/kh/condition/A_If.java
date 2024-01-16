@@ -17,10 +17,6 @@ public class A_If {
 	public void method1() {
 
 		// 입력받은 성적이 60점 이상이면 "합격입니다"를 출력
-
-		
-		
-		
 		
 		System.out.println("성적을 입력 : ");
 //		int score = sc.nextInt()
@@ -83,8 +79,7 @@ public class A_If {
 			System.out.println("본인이 아니다");
 		}
 
-	}
-
+	}	
 	public void method4() {
 
 		// 입력받은 숫자가 0보다 크면 "양수", 0이면 "0이다", 작으면 "음수" 출력
@@ -198,11 +193,9 @@ public class A_If {
 		if (num1 % 2 == 0) 
 			System.out.println(num1);
 		
-
 		if (num2 % 2 == 0) 
 			System.out.println(num2);
 		
-
 		if (num3 % 2 == 0) 
 			System.out.println(num3);
 		
@@ -217,24 +210,59 @@ public class A_If {
 	
 	// 이문제도 String 변수로 값을 넣어서 문을 만들수 있다 !!
 	public void practice3() {
-		System.out.println("정수를 입력 >");
-		int num1 = Integer.parseInt(sc.nextLine());
-
-		if (num1 < 0) {
-			System.out.println("minus");
-		} else if (num1 > 0) {
-			System.out.println("plus");
-		} else {
-			System.out.println("zere");
-		}
-
-		if (num1 % 2 == 0) System.out.println("짝(even)");
+		System.out.println("정수 입력 > ");
+		int num = sc.nextInt();
 		
-
-		if (num1 % 2 != 0) System.out.println("홀(odd)");
+		if(num > 0) {
+			System.out.println("양(plus)");			
+		}else if(num < 0) {
+			System.out.println("음(minus)");
+		}else {
+			System.out.println("0(zero)");
+		}
+		
+		if(num % 2 == 0) {
+			System.out.println("짝(even)");
+		}
+		if(num % 2 != 0) {
+			System.out.println("홀(odd)");
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+//		
+//		
+//		System.out.println("정수를 입력 >");
+//		int num1 = Integer.parseInt(sc.nextLine());
+//
+//		if (num1 < 0) {
+//			System.out.println("minus");
+//		} else if (num1 > 0) {
+//			System.out.println("plus");
+//		} else {
+//			System.out.println("zere");
+//		}
+//
+//		if (num1 % 2 == 0) System.out.println("짝(even)");
+//		
+//
+//		if (num1 % 2 != 0) System.out.println("홀(odd)");
 		
 	}
-
+	
+	
+	
 	public static void main(String[] args) {
 		A_If a = new A_If();
 //		a.method1();
@@ -245,6 +273,7 @@ public class A_If {
 //		a.practice1();
 //		a.practice2();
 		a.practice3();
+//		a.method6();
 	}
 
 }

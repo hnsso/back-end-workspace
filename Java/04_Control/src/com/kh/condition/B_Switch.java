@@ -34,7 +34,8 @@ public class B_Switch {
 		 * 3일 경우 "초록색입니다"
 		 * 잘 못 입력했을 경우 "잘 못 입력했습니다"
 		 * 
-		 * */
+		 * */		
+		
 		System.out.println("숫자 입력 > ");
 		int number = sc.nextInt();
 		
