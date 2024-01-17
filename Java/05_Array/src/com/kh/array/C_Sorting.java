@@ -157,11 +157,11 @@ public class C_Sorting {
 	
 	public static void main(String[] args) {
 		C_Sorting c = new C_Sorting();
-//		c.method1();
-//		c.method2();
-//		c.method3();
-//		c.method4();
-//		c.method5();
+		c.method1();
+		c.method2();
+		c.method3();
+		c.method4();
+		c.method5();
 		c.method6();
 	
 	}
