@@ -29,6 +29,9 @@ public class A_Array {
 	 * 	  자료형 배열명[] = new 자료형[배열크기];
 	 * */
 	public void method1() {
+		
+		int[] nums = n
+		
 		int[] nums = new int[5]; // 배열크기를 지정하지 않으면 에러!
 		System.out.println(nums);
 		

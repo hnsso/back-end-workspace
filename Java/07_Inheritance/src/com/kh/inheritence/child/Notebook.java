@@ -36,14 +36,14 @@ public class Notebook extends Product {
 	public Notebook(String brand, String pCode, String name, int price, String cpu) {
 		// super : 해당 객체의 부모의 객체 주소를 담고 있다 .
 		// 1, 부모 생성자 호출해서 초기화
-		super(brand, pCode, name, price);
-		this.cpu = cpu;
+		super(brand, pCode, name, price); // 부모를 가르키는 / 생성자를 호출한 코드
+		this.cpu = cpu; // 자신을 가르키는 / 
 		
 		// 2. super. 를 통해서 부모의 변수에 직접 접근
 //		super.brand = brand; // 부모가 private - 직접 접근 x
 //		super.pCode = pCode; // 부모가 default - 같은 패키지에 있어야만 직접 접근 O
 		super.name = name; // 부모가 protected - 상속관계일 때 자식 객체에서 직접 접근 O
-		super.price = price; // 부모가 public - 어디서든 접근 가능
+//		super.price = price; // 부모가 public - 어디서든 접근 가능
 		
 		// 3. 부모의 setter 메서드를 호출해서 초기화
 		//		- 부모 클래스에서 setter 메서드를 제공하면
@@ -51,6 +51,21 @@ public class Notebook extends Product {
 		super.setBrand(brand);
 		this.setpCode(pCode);
 		setName(name);
+	}
+
+	@Override
+	public String toString() {
+		return super.toString() + ", Notebook [cpu=" + cpu + "]";
+	}
+
+
+
+	public String getCpu() {
+		return cpu;
+	}
+
+	public void setCpu(String cpu) {
+		this.cpu = cpu;
 	}
 
 }

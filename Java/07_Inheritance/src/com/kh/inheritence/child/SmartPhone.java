@@ -4,10 +4,31 @@ import com.kh.inheritence.parent.Product;
 
 public class SmartPhone extends Product {
 	
-	public SmartPhone(String brand, String pCode, String name, int price) {
+	
+	
+	public SmartPhone() {}
+
+
+	public SmartPhone(String brand, String pCode, String name, int price, String mobileAgency) {
 		super(brand, pCode, name, price);
-		// TODO Auto-generated constructor stub
+		this.mobileAgecy = mobileAgency;
+		
 	}
+
+	public String getMobileAgecy() {
+		return mobileAgecy;
+	}
+
+	public void setMobileAgecy(String mobileAgecy) {
+		this.mobileAgecy = mobileAgecy;
+	}
+	
+
+	@Override
+	public String toString() {
+		return super.toString() + ", SmartPhone [mobileAgecy=" + mobileAgecy + "]";
+	}
+
 
 	private String mobileAgecy;
 }
