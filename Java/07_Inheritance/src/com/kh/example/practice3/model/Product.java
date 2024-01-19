@@ -1,8 +1,7 @@
 package com.kh.example.practice3.model;
 
-public class Product {
 
-	public class Product /*extends Object*/ {
+	public class Product/*extends Object*/ {
 		
 		private String brand; // 브랜드
 		String pCode; // 상품코드
@@ -59,5 +58,3 @@ public class Product {
 		
 	}
 
-	
-}
