@@ -1,4 +1,4 @@
-package com.kh.inheritence.parent;
+package com.kh.composite.model;
 
 	/*
 	 * 모든 클래스는 Object 클래스의 후손이다.
