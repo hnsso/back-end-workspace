@@ -16,4 +16,23 @@ public class LibraryController {
 		bookList[3] = new Anibook("주술회전 24", 15);
 		
 	}
+
+	public Member getMember() {
+		return member;
+	}
+
+	public void setMember(Member member) {
+		this.member = member;
+	}
+
+	public Book[] getBookList() {
+		return bookList;
+	}
+
+	public void setBookList(Book[] bookList) {
+		this.bookList = bookList;
+	}
+	
+	
+	
 }

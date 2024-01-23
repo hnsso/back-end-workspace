@@ -15,26 +15,26 @@ public class Application {
 	public static void main(String[] args) {
 
 		Application app = new Application(); // 객체 생성 !!!
-		app.mainMenu();
+		app.mainMenu(); // 위 Application의 생성자함수를 만들고 난다음 바로 밑에서 시작!
 	}
 
 	public void mainMenu() {
-		boolean check = true;
-		while (true) {
+		boolean check = true; // 무한반복을 하기위한 것 !!
+		while (true) { // 그래서 while문을 시작한다 !!
 			System.out.println("===== 메뉴 =====");
 			System.out.println("1. 원");
 			System.out.println("2. 사각형");
 			System.out.println("9. 끝내기");
 			System.out.println("메뉴 번호 : ");
 
-			switch (Integer.parseInt(sc.nextLine())) {
+			switch (Integer.parseInt(sc.nextLine())) { // 숫자를 입력해서 글이 나오게 할려면 !!
 			case 1:
 				circleMenu();
 				break;
 			case 2:
 				rectangleMenu();
 				break;
-			case 9 :
+			case 9:
 				check = false;
 				break;
 
@@ -53,13 +53,12 @@ public class Application {
 
 		switch (Integer.parseInt(sc.nextLine())) {
 		case 1:
-			circleMenu(); // 호출하겠다!
+			calcCircum(); // 호출하겠다!
 			break;
 		case 2:
 			calcCircleArea(); // 호출하겠다
 			break;
-		case 9 :
-			
+		case 9:
 			break;
 		}
 	}
@@ -78,6 +77,9 @@ public class Application {
 		case 2:
 			calcRectArea(); // 호출하겠다
 			break;
+		case 9:
+			break;
+
 		}
 	}
 

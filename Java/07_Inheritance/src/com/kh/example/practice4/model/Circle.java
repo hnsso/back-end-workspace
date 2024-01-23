@@ -12,18 +12,17 @@ public class Circle extends Point {
 		this.radius = radius;
 	}
 
+	@Override
+	public String toString() {
+		return "위치 : (" + super.getX() + ", " + super.getY() + ")," + "반지름 : " + radius + " / ";
+	}
+
 	public int getRadius() {
 		return radius;
 	}
 
 	public void setRadius(int radius) {
 		this.radius = radius;
-	}
-
-	@Override
-	public String toString() {
-		return  "위치 : (" + super.getX() + ", " + super.getY() + ")," + "반지름 : " 
-				+ radius + " / " ;
 	}
 
 }
