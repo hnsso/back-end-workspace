@@ -1,11 +1,24 @@
 package com.kh.list.model;
 
-public class Person {
+public class Person implements Comparable<Person>{
 
 	private String name;
 	private String addr;
 	private int age;
 
+	/*
+	 * compareTo : 반환되는 값을 가지고 정렬 기준을 잡는다 .
+	 * - 자기자신과 매개값으로 전달된 객체가 같은 타입의 객체인지 비교
+	 * - 비교해서 같으면 0을 반환, 자기자신이 크다면 양의 정수(1), 
+	 * 										작다면 음의 정수(-1) 반환 
+	 * 
+	 * */
+	@Override 
+	public int compareTo(Person o) {
+//		return this.age == o.age ? 0 : this.age > o.age ? 1 : -1; // 나이순
+		return this.name.compareTo(o.name); // String 을 class다
+	}
+	
 	public Person() {
 	}
 
@@ -18,7 +31,7 @@ public class Person {
 
 	@Override
 	public String toString() {
-		return "Person [name=" + name + ", address=" + addr + ", age=" + age + "]";
+		return "Person [name=" + name + ", addr=" + addr + ", age=" + age + "]";
 	}
 
 	public String getName() {
@@ -29,11 +42,11 @@ public class Person {
 		this.name = name;
 	}
 
-	public String getAddress() {
+	public String getAddr() {
 		return addr;
 	}
 
-	public void setAddress(String address) {
+	public void setAddr(String address) {
 		this.addr = address;
 	}
 
@@ -44,5 +57,7 @@ public class Person {
 	public void setAge(int age) {
 		this.age = age;
 	}
+
+
 
 }
