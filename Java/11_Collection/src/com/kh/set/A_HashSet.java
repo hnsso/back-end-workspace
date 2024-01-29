@@ -13,7 +13,7 @@ import com.kh.set.model.Person;
  **/
 
 
-//HashSet : Set 인터페이스를 구현한 대표적인 컬렉션 클래스
+// HashSet : Set 인터페이스를 구현한 대표적인 컬렉션 클래스
 
 public class A_HashSet {
 

@@ -46,7 +46,7 @@ public class A_ArrayList {
 	}
 
 	public void method1() {
-		List list = new ArrayList(); // 객체 생성 / 경고가 나는 이유는 타입을 정해주라는 말이다
+		List list = new ArrayList(); // 객체 생성 / 경고가 나는 이유는 테이터타입을 정해주라는 말이다
 		// 문자열이 들어간다는건 객체도 들어갈수있다 !!
 		list.add("신대규");
 		list.add("정대윤");
@@ -114,9 +114,9 @@ public class A_ArrayList {
 		// 리스트에 저장된 사람들의 평균 연령을 출력
 
 		int sum = 0;
-//		for (int i = 0; i < list.size(); i++) {
-//			sum += list.get(i).getAge();
-//		}
+		for (int i = 0; i < list.size(); i++) {
+			sum += list.get(i).getAge();
+		}
 
 		for (Person p : list) {
 			sum += p.getAge();
