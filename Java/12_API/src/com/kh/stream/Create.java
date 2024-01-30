@@ -57,7 +57,9 @@ public class Create {
 	 * 배열(컬렉션)로부터 스트림을 생성하는 방법
 	 * */
 	public void method2() {
-		String[] names = {"이상현", "정대윤", "이상호", "권예빈", "손민정", "정세영", "조세미"};
+		String[] names = {"이상현", "정대윤", "이상호"
+										, "권예빈", "손민정", "정세영", "조세미"};
+		
 		List<String> nameList = Arrays.asList(names);
 		
 		for(String name : names) {

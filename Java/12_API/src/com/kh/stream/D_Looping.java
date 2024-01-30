@@ -13,7 +13,7 @@ import java.util.Arrays;
 public class D_Looping {
 
 	public static void main(String[] args) {
-		int[] values = { 1, 2, 3, 4, 5 };
+		int[] values = { 1, 2, 3, 4, 5 }; // 배열 생성
 
 		// peek
 		int sum = Arrays.stream(values)

@@ -8,9 +8,9 @@ public class A_String {
 
 	public static void main(String[] args) {
 		A_String a = new A_String();
-		//a.method1();
-		//a.method2();
-		//a.method3();
+		a.method1();
+		a.method2();
+		a.method3();
 		a.method4();
 	}
 	
@@ -22,7 +22,7 @@ public class A_String {
 	 * */
 	public void method1() {
 		// 문자열 리터럴과 new 연산자로 생성된 문자열 비교
-		String str1 = "hello";
+		String str1 = "hello";   // "hello"라는 객체 생성 ! 
 		String str2 = "hello";
 		String str3 = new String("hello");
 		String str4 = new String("hello");
@@ -39,7 +39,7 @@ public class A_String {
 	
 	// String 클래스에서 제공하는 메서드
 	public void method2() {
-		String str = "Hello, Java!";
+		String str = "Hello, Java!"; // 객체 생성 
 		
 		// 1. charAt(int index) : char
 		//     - 전달받은 index 위치의 하나의 문자만 추출해서 리턴

@@ -15,7 +15,7 @@ public class A_Filtering {
 
 	public static void main(String[] args) {
 		A_Filtering a = new A_Filtering();
-		//a.method1();
+		a.method1();
 		a.method2();
 	}
 	
