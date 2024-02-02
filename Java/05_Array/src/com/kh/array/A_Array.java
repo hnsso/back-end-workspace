@@ -29,9 +29,6 @@ public class A_Array {
 	 * 	  자료형 배열명[] = new 자료형[배열크기];
 	 * */
 	public void method1() {
-		
-		int[] nums = n
-		
 		int[] nums = new int[5]; // 배열크기를 지정하지 않으면 에러!
 		System.out.println(nums);
 		
@@ -81,6 +78,7 @@ public class A_Array {
 	 * 175.2
 	 * */
 	public void method3() {
+		
 		double[] arr = new double[3];
 		Scanner sc = new Scanner(System.in);
 		double sum = 0;
@@ -180,13 +178,13 @@ public class A_Array {
 
 	public static void main(String[] args) {
 		A_Array a = new A_Array();
-		a.method1();
-		a.method2();	
-		a.method3();
-		a.method4();
-		a.method5();
-		a.method6();
-		a.method7();
+//		a.method1();
+		// a.method2();	
+		//a.method3();
+		//a.method4();
+		//a.method5();
+		//a.method6();
+		//a.method7();
 		a.method8();
 	}
 
