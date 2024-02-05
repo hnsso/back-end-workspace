@@ -7,7 +7,7 @@ import com.kh.controller.MemberController;
 import com.kh.model.Member;
 
 public class Application {
-	
+
 	private Scanner sc = new Scanner(System.in);
 	private MemberController mc = new MemberController();
 
@@ -19,19 +19,19 @@ public class Application {
 			e.printStackTrace();
 		}
 	}
-	
+
 	public void mainMenu() throws SQLException {
-		
+
 		System.out.println("===== KH 사이트 =====");
-		
+
 		boolean check = true;
-		while(check) {
+		while (check) {
 			System.out.println("****** 메인 메뉴 ******");
 			System.out.println("1. 회원가입");
 			System.out.println("2. 로그인");
 			System.out.println("9. 종료");
 			System.out.print("메뉴 번호 입력 : ");
-			switch(Integer.parseInt(sc.nextLine())) {
+			switch (Integer.parseInt(sc.nextLine())) {
 			case 1:
 				signUp();
 				break;
@@ -47,41 +47,47 @@ public class Application {
 		}
 
 	}
-	
+
+	// 회원 가입 !!
 	public void signUp() throws SQLException {
-		// 아이디, 비밀번호, 이름을 사용자한테 입력받아
+		// 아이디, 비밀번호, 이름을 사용자한테 입력받아 =============================
 		System.out.print("아이디 : ");
 		String id = sc.nextLine();
-		
+
 		System.out.print("비밀번호 : ");
 		String password = sc.nextLine();
-		
+
 		System.out.print("이름 : ");
 		String name = sc.nextLine();
-		
+		// ==============================================================
+
+		// member 클래스 생성(= 객체생성)
 		Member m = new Member(id, password, name);
-		
+
 		// MemberController의 signUp 메서드 반환 결과에 따라
-		if(mc.signUp(m)) {
+		if (mc.signUp(m)) {
 			// true면 "성공적으로 회원가입 완료하였습니다." 출력
 			System.out.println("성공적으로 회원가입 완료하였습니다.");
 		} else {
 			// false면 "중복된 아이디입니다. 다시 입력해주세요." 출력
 			System.out.println("중복된 아이디입니다. 다시 입력해주세요.");
 		}
-		
+
 	}
+
 	public void login() throws SQLException {
 		// 아이디, 비밀번호를 사용자한테 입력받아
 		System.out.print("아이디 : ");
 		String id = sc.nextLine();
-		
+
 		System.out.print("비밀번호 : ");
 		String password = sc.nextLine();
-		
+
 		// MemberController의 login 메서드 반환 결과를 이름으로 받고
+		// 계속 사용하는걸 변수명으로 간단하게 정리한다 그리고 실행 !
 		String name = mc.login(id, password);
-		if(name!=null) {
+
+		if (name != null) {
 			// 이름이 null이 아니면 "~~님, 환영합니다!" 출력
 			System.out.println(name + "님, 환영합니다!");
 			// --> login 성공! 성공했다면 memberMenu() 호출
@@ -92,16 +98,16 @@ public class Application {
 		}
 
 	}
-	
+
 	public void memberMenu() throws SQLException {
 		boolean check = true;
-		while(check) {
+		while (check) {
 			System.out.println("****** 회원 메뉴 ******");
 			System.out.println("1. 비밀번호 바꾸기");
 			System.out.println("2. 이름 바꾸기");
 			System.out.println("3. 로그아웃");
 			System.out.print("메뉴 번호 입력 : ");
-			switch(Integer.parseInt(sc.nextLine())) {
+			switch (Integer.parseInt(sc.nextLine())) {
 			case 1:
 				changePassword();
 				break;
@@ -120,45 +126,46 @@ public class Application {
 		// 아이디, 현재 비밀번호, 새로운 비밀번호를 사용자한테 입력받아
 		System.out.print("아이디 : ");
 		String id = sc.nextLine();
-		
+
 		System.out.print("현재 비밀번호 : ");
 		String password = sc.nextLine();
-		
+
 		System.out.print("새로운 비밀번호 : ");
 		String newPassword = sc.nextLine();
-		
+
 		// MemberController의 changePassword 메서드 반환 결과에 따라
-		if(mc.changePassword(id, password, newPassword)) {
+		if (mc.changePassword(id, password, newPassword)) {
 			// true면 "비밀번호 변경에 성공했습니다." 출력
 			System.out.println("비밀번호 변경에 성공했습니다.");
 		} else {
 			// false면 "비밀번호 변경에 실패했습니다. 다시 입력해주세요." 출력
 			System.out.println("비밀번호 변경에 실패했습니다. 다시 입력해주세요.");
 		}
-		
+
 	}
+
 	public void changeName() throws SQLException {
-		// 아이디, 비밀번호를 사용자한테 입력받아 
+		// 아이디, 비밀번호를 사용자한테 입력받아
 		System.out.print("아이디 : ");
 		String id = sc.nextLine();
-		
+
 		System.out.print("비밀번호 : ");
 		String password = sc.nextLine();
-		
+
 		// 사용자가 맞는지 확인 후 - MemberController의 login 메서드 활용
 		String name = mc.login(id, password);
 		// 이름이 null이 아니면
-		if(name!=null) {
-			//  --> "현재 설정된 이름 : OOO" 출력
+		if (name != null) {
+			// --> "현재 설정된 이름 : OOO" 출력
 			System.out.println("현재 설정된 이름 : " + name);
-			
-			//  --> 변경할 이름을 사용자한테 입력받아
+
+			// --> 변경할 이름을 사용자한테 입력받아
 			System.out.print("변경할 이름 : ");
 			String newName = sc.nextLine();
-			
+
 			// MemberController의 changeName 메서드로 이름 변경 후
 			mc.changeName(id, newName);
-			
+
 			// "이름 변경에 성공하였습니다." 출력
 			System.out.println("이름 변경에 성공하였습니다.");
 		} else {
