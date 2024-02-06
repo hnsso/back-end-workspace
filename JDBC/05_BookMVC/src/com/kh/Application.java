@@ -11,7 +11,6 @@ public class Application {
 	private BookController bc = new BookController();
 
 	public static void main(String[] args) {
-
 		Application app = new Application();
 		app.mainMenu();
 	}
@@ -71,6 +70,8 @@ public class Application {
 		if(bc.registerBook(b)) {	
 			// 등록에 성공하면 "성공적으로 책을 등록했습니다." 출력
 			System.out.println("성공적으로 책을 등록했습니다.");
+			
+			printBookAll();
 		} else {
 			// 실패하면 "책을 등록하는데 실패했습니다." 출력
 			System.out.println("책을 등록하는데 실패했습니다 ");

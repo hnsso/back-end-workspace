@@ -19,13 +19,12 @@ public class MemberController {
 		}
 	}
 
-	// 2. 데이터 베이스 연결
 	public Connection getConnect() throws SQLException {
 		return DriverManager.getConnection("jdbc:mysql://localhost:3306/kh", "root", "1234");
 	}
 
-	// 자원반납 !!
-	public void close(PreparedStatement ps, Connection conn) throws SQLException {
+	// 자원반납 !!        매개변수까지 작성
+	public void close(PreparedStatement ps, Connection conn) throws SQLException  {
 		if (ps != null)
 			ps.close();
 		if (conn != null)
@@ -46,21 +45,21 @@ public class MemberController {
 		// 회원가입 기능 구현!
 		// -> 아이디가 기존에 있는지 체크 여부!
 		// -> member 테이블에 데이터 추가! (INSERT)
-		// INSERT INTO member VALUES('test', 'test1234', '테스트')
+		// -> 미리 추가할 쿼리문 복사 해놓은거 !! = INSERT INTO member VALUES('test', 'test1234', '테스트')
 
 		// signUp 메서드 반환한다 !
 		if (!idCheck(m.getId())) {
 			// 쿼리문 객체 생성 !! !!
 			String query = "INSERT INTO member VALUES(?, ?, ?)";
 			PreparedStatement ps = conn.prepareStatement(query);
-			
+
 			// 쿼리문 실행
 			ps.setString(1, m.getId());
 			ps.setString(2, m.getPassword());
 			ps.setString(3, m.getName());
 
 			ps.executeUpdate();
-			// 반납 
+			// 반납
 			close(ps, conn);
 			// 결과 도출한다 !
 			return true;
@@ -77,14 +76,17 @@ public class MemberController {
 		ps.setString(1, id);
 
 		ResultSet rs = ps.executeQuery();
+		
 		String checkId = null;
 
 		if (rs.next())
 			checkId = rs.getString("id");
+		// 자원반납 close()매개변수로 바꾼거 !!
 		close(rs, ps, conn);
 
 		if (checkId != null)
 			return true;
+		
 		return false;
 	}
 
@@ -97,11 +99,16 @@ public class MemberController {
 		ps.setString(1, id);
 		ps.setString(2, password);
 
+		// JDBC연결한 rs라는 id password가 포함된 쿼리문
 		ResultSet rs = ps.executeQuery();
+		
 		String name = null;
+		
 		if (rs.next())
 			name = rs.getString("name");
+		
 		close(rs, ps, conn);
+		
 		return name;
 	}
 

@@ -84,6 +84,7 @@ public class Application {
 		String password = sc.nextLine();
 
 		// MemberController의 login 메서드 반환 결과를 이름으로 받고
+		
 		// 계속 사용하는걸 변수명으로 간단하게 정리한다 그리고 실행 !
 		String name = mc.login(id, password);
 
