@@ -5,18 +5,10 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<style>
-	body{
-		display: flex;
-		justify-content: center;
-	}
-	img{
-		width: 50%;
-		min-width: 500px;
-	}
-</style>
 </head>
 <body>
-	<img src="404.jpg">
+	<!-- 자바코드 % -->
+	<% String name = (String) request.getAttribute("name"); %>
+	<h1><%=name %>님, 환영합니다 !!</h1>
 </body>
 </html>
