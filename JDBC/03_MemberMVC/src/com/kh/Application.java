@@ -128,9 +128,9 @@ public class Application {
 		System.out.println("1. 아이디 > ");
 		System.out.println("2. 비밀번호 > ");
 
-		if (id != null) {
-
-		}
+//		if (id != null) {
+//
+//		}
 
 	}
 
