@@ -23,7 +23,9 @@ public class DBConnectionTest2 {
 
 			// 3. 쿼리 준비 - INSERT
 			String query = "INSERT INTO employee_copy(emp_id, emp_name, emp_no) VALUES (?, ?, ?)";
+			
 			PreparedStatement ps = conn.prepareStatement(query);
+			// conn 데이터베이스 연결 객체
 
 			// 4. 쿼리문 실행
 			ps.setInt(1, 700);

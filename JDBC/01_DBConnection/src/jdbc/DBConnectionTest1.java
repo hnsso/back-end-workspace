@@ -12,6 +12,13 @@ public class DBConnectionTest1 {
 	public static void main(String[] args) {
 
 		// JDBC(Java Database Connectivity) 작업 4단계
+		
+		// JDBC 
+		
+		// class.forName(드라이버 클래스이름) 드라이버 로딩 
+		// Connection conn =  DriverManager.getConnection(url, user , password); 데이터베이스와 eclipse 연결 !! 
+		// (쿼리문 생성!!)String query = "SELECT문 UPDATE 문 INSERT문 DELETE문" 
+		//  preparedStatement ps = coon.prepareStatement(query);
 
 		try {
 			// 1. 드라이버 로딩 => MySQL 연결
@@ -45,7 +52,7 @@ public class DBConnectionTest1 {
 				Date hireDate = rs.getDate("hire_date");
 				char entYn = rs.getString("ent_yn").charAt(0);
 
-				System.out.println(
+				System.out.println("쿼리문 실행" +
 						empId + " / " + empName + " / " + salary + " / " + bonus + " / " + hireDate + " / " + entYn);
 			}
 
