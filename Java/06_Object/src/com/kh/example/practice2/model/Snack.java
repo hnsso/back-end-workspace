@@ -9,11 +9,12 @@ public class Snack {
 	private String flavor;
 	private int numOf;
 	private int price;
-	
+
 // 2기본 생성자 명시 : 
 	public Snack() {
-		
+
 	}
+
 // 3꽉 채워진 생성자 명시 :
 	public Snack(String kind, String name, String flavor, int numOf, int price) {
 
@@ -24,6 +25,7 @@ public class Snack {
 		this.price = price;
 
 	}
+
 // getter 내가 가져오기 setter
 	public String getKind() {
 		return kind;
