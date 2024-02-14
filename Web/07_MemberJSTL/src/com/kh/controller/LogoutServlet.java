@@ -1,4 +1,4 @@
-package com.kh.servlet;
+package com.kh.controller;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import com.kh.model.dao.MemberDAO;
 import com.kh.model.vo.Member;
@@ -18,18 +19,18 @@ public class LogoutServlet extends HttpServlet {
 
 	protected void service(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
+		
+		// 3. Session에 있는 바인딩 죽이기
+		HttpSession session = request.getSession();
 
-		// 1 . 폼 가져오기 !
-		String id = request.getParameter("id");
-		String password = request.getParameter("password");
-
-		MemberDAO dao = new MemberDAO();
-
-		try {
-			dao.login(id, password);
-		} catch (SQLException e) {
-			e.printStackTrace();
+		// 형변환
+		Member member = (Member) session.getAttribute("member");
+		if (member != null) {
+			session.invalidate();
 		}
+		
+		// 4. 네비게이션
+		response.sendRedirect("index.jsp");
+		
 	}
-
 }

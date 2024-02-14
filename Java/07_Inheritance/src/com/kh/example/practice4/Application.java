@@ -7,17 +7,17 @@ import com.kh.example.practice4.controller.CircleController;
 import com.kh.example.practice4.controller.RectangleController;
 
 public class Application {
-
 	Scanner sc = new Scanner(System.in);
 	CircleController cc = new CircleController();
 	RectangleController rc = new RectangleController();
 
-	public static void main(String[] args) {
-
+	public static void main(String[] args) {	
+		
 		Application app = new Application(); // 객체 생성 !!!
 		app.mainMenu(); // 위 Application의 생성자함수를 만들고 난다음 바로 밑에서 시작!
 	}
 
+	
 	public void mainMenu() {
 		boolean check = true; // 무한반복을 하기위한 것 !!
 		while (true) { // 그래서 while문을 시작한다 !!

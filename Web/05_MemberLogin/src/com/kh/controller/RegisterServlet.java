@@ -1,4 +1,4 @@
-package com.kh.servlet;
+package com.kh.controller;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -17,7 +17,7 @@ import com.kh.model.vo.Member;
 public class RegisterServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 
-	
+	// Servlet의 중요 비즈니스 로직인데 상황에 따라 달라진다 !!
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		// 1 . 폼 가져오기 !
@@ -30,21 +30,19 @@ public class RegisterServlet extends HttpServlet {
 		Member member = new Member(id, password, name);
 		
 		try {
-			dao.registerMember(member);
+			int result = dao.registerMember(member);
+			
+			if(result == 1) {
+			
+			// 4. 네비게이션
+			response.sendRedirect("index.jsp");
+			
+			}
+			
 		} catch (SQLException e) {
+			
 			e.printStackTrace();
-		}
 		
-		// 3 . 바인딩
-		request.setAttribute("id", id );
-		request.setAttribute("password", password);
-		request.setAttribute("name", name);
-		
-		
-		// 4 . 보내야한다
-		if(member!=null) {
-			request.getRequestDispatcher("index.jsp").forward(request, response);
-			} 
-		
+		}		
 	}
 }

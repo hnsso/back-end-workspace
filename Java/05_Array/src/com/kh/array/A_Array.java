@@ -28,6 +28,10 @@ public class A_Array {
 	 * 	  자료형[] 배열명 = new 자료형[배열크기];
 	 * 	  자료형 배열명[] = new 자료형[배열크기];
 	 * */
+	
+	
+	// 배열 선언과 초기화 하고 그배명크기만큼 지정해줘야한다 !! 
+	
 	public void method1() {
 		int[] nums = new int[5]; // 배열크기를 지정하지 않으면 에러!
 		System.out.println(nums);
@@ -63,6 +67,7 @@ public class A_Array {
 		 * nums[2]
 		 * nums[3]
 		 * nums[4]
+		 * 
 		 * */
 		
 		for(int i=0; i < nums.length; i++) {
@@ -71,9 +76,9 @@ public class A_Array {
 	}
 	
 	/*
-	 * 3명의 키를 입력받아 배열에 저장하고 3명의 키의 평균값을 구하시오
-	 * 키 입력 > 180
-	 * 키 입력 > 177.3
+	 * 3명의
+	 * 키 입력 > 177 키를 입력받아 배열에 저장하고 3명의 키의 평균값을 구하시오
+	 * 키 입력 > 180.3
 	 * 키 입력 > 168.2
 	 * 175.2
 	 * */
@@ -179,13 +184,13 @@ public class A_Array {
 	public static void main(String[] args) {
 		A_Array a = new A_Array();
 //		a.method1();
-		// a.method2();	
-		//a.method3();
-		//a.method4();
-		//a.method5();
-		//a.method6();
-		//a.method7();
-		a.method8();
+//		a.method2();	
+//		a.method3();
+		a.method4();
+//		a.method5();
+//		a.method6();
+//		a.method7();
+//		a.method8();
 	}
 
 }

@@ -111,8 +111,9 @@ public class B_Switch {
 				break;
 			case 2 : System.out.println("글쓰기권환, 읽기권한");
 				break;
-	
 			case 3 : System.out.println("읽기권한");
+				break;
+			default : System.out.println("읽지마 그냥"); 
 			}			
 		}
 			

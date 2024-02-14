@@ -27,6 +27,7 @@ public class Application {
 		}
 		
 		System.out.println();
+		
 		// 위랑 같은것이 출력된다 !!
 		// 항상된 for문 = 배열과 조건이 있을때 사용한다 !!
 		for(Student student : stuArr) {

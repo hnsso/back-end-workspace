@@ -8,16 +8,17 @@ public class ConditionPractice {
     
 	public static void main(String[] args) {
 		ConditionPractice c = new ConditionPractice();
-		// c.practice1();
-		// c.practice2();
-		// c.practice3();
-		// c.practice4();
-		// c.practice5();
-		// c.practice6();
-		// c.practice7();
-		// c.practice8();
-		// c.practice9();
-		c.practice11();
+//		 c.practice1();
+//		 c.practice2();
+//		 c.practice3();
+//		 c.practice4();
+//		 c.practice5();
+//		 c.practice6();
+//		 c.practice7();
+//		 c.practice8();
+//		 c.practice9();
+		 c.practice10();
+//		 c.practice11();
 	}
 
     /*
@@ -26,19 +27,39 @@ public class ConditionPractice {
     
        숫자를 한 개 입력하세요 : -8
        양수만 입력해주세요.
+       
      */
-    public void practice1() {
-    	System.out.print("숫자를 한 개 입력하세요 : ");
-    	int number = sc.nextInt();
-    	
-    	if(number <= 0) { // 양수가 아닌 것들부터 처리!
-    		System.out.println("양수만 입력해주세요");
-    	} else if(number % 2 == 0) {
-    		System.out.println("짝수다");
-    	} else {
-    		System.out.println("홀수다");
-    	}
+	public void practice1() {
+		System.out.println("정수를 입력 하세요 제발 !! ");
+		
+		int num = Integer.parseInt(sc.nextLine());
+		
+		if(num % 2 == 0 && num > 0) {
+			System.out.println("짝~~ 짝~~ 수");
+		} else if(num % 2 == 1 && num > 0) {
+			System.out.println("호올수 ~~ ");
+		} else {
+			System.out.println("경찰서 가고싶어 !! ");
+		}
+	
+	}
+//    public void practice1() {
+//    	System.out.print("숫자를 한 개 입력하세요 : ");
+//    	int number = sc.nextInt();
+//    	
+//    	if(number <= 0) { // 양수가 아닌 것들부터 처리!
+//    		System.out.println("양수만 입력해주세요");
+//    	} else if(number % 2 == 0) {
+//    		System.out.println("짝수다");
+//    	} else {
+//    		System.out.println("홀수다");
+//    	}
     	/*
+    	 * 
+    	 * 
+    	 * 
+    	 * 
+    	 * 
     	if(number > 0) {
     		if(number % 2 == 0) {
     			System.out.println("짝수다");
@@ -49,7 +70,7 @@ public class ConditionPractice {
     		System.out.println("양수만 입력해주세요");
     	}
     	*/
-    }
+    
 
     /*
         2. 정수 num1과 num2를 입력 받아서 두 수가 같으면 1 다르면 -1을 출력하세요.
@@ -62,19 +83,41 @@ public class ConditionPractice {
         num2 : 11
         1
      */
-    public void practice2() {
-    	System.out.print("num1 : ");
-    	int num1 = sc.nextInt();
-    	
-    	System.out.print("num2 : ");
-    	int num2 = sc.nextInt();
-    	
-    	if(num1 == num2) {
-    		System.out.println(1);
-    	} else {
-    		System.out.println(-1);
-    	}
-    }
+	
+	public void practice2() {
+		System.out.println("num1 : ");
+		int num1 = sc.nextInt();
+	
+		System.out.println("num2 : ");
+		int num2 = sc.nextInt();
+		
+		if(num1 == num2) {
+			System.out.println(1);
+		}else {
+			System.out.println(-1);
+		}
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+//    public void practice2() {
+//    	System.out.print("num1 : ");
+//    	int num1 = sc.nextInt();
+//    	
+//    	System.out.print("num2 : ");
+//    	int num2 = sc.nextInt();
+//    	
+//    	if(num1 == num2) {
+//    		System.out.println(1);
+//    	} else {
+//    		System.out.println(-1);
+//    	}
+//    }
 
     /*
         3. A 피자가게는 피자를 두 조각에서 열 조각까지 원하는 조각 수로 잘라준다.
@@ -352,7 +395,7 @@ public class ConditionPractice {
     	System.out.println("4. 삭제");
     	System.out.println("9. 종료");
     	System.out.print("메뉴 번호를 입력하세요 : ");
-    	int num = sc.nextInt();
+    	int num = Integer.parseInt(sc.nextLine());
     	String result = "";
     	switch(num) {
 	    	case 1:

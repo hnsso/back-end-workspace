@@ -171,7 +171,9 @@ public class A_If {
 	/*
 	 * 세 정수를 입력했을 때 짝수만 출력
 	 * 
-	 * num1 입력 > 3 num2 입력 > 4 num3 입력 > 6
+	 * num1 입력 > 3 
+	 * num2 입력 > 4 
+	 * num3 입력 > 6
 	 * 
 	 * 4 6
 	 * 
@@ -271,8 +273,8 @@ public class A_If {
 //		a.method4();
 //		a.method5();
 //		a.practice1();
-//		a.practice2();
-		a.practice3();
+		a.practice2();	
+//		a.practice3();
 //		a.method6();
 	}
 

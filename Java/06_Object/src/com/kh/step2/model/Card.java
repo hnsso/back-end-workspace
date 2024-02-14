@@ -20,6 +20,7 @@ public class Card {
 	 * */
 	
 	// 인스턴스 변수
+	// => 인스턴스 변수의 정의는 서로 다른 클래스 안의 number변수가 독립적으로 유지 !
 	public int number; // 숫자
 	public String kind; // 모양
 	
