@@ -1,12 +1,10 @@
 package com.kh.test6.model;
 
 public class Food {
-
 	private String name;
 	private int kcal;
-	
-	public Food() {
-	}
+
+	public Food() {}
 
 	public Food(String name, int kcal) {
 		this.name = name;
@@ -17,7 +15,7 @@ public class Food {
 	public String toString() {
 		return "Food [name=" + name + ", kcal=" + kcal + "]";
 	}
-		
+
 	public String getName() {
 		return name;
 	}
@@ -34,6 +32,4 @@ public class Food {
 		this.kcal = kcal;
 	}
 
-	
-	
 }

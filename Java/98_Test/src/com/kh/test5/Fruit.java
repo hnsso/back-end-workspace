@@ -1,17 +1,17 @@
-package com.kh.test5.model;
+package com.kh.test5;
 
 public class Fruit {
 	private String name;
 	private String color;
 
-	public Fruit(String name, String color) {
-		super();
-		this.name = name;
-		this.color = color;
+	public Fruit() {
+
 	}
 
-	public Fruit(String name) {
+	public Fruit(String name, String color) {
+
 		this.name = name;
+		this.color = color;
 	}
 
 	public String getName() {

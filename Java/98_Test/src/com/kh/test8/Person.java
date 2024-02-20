@@ -1,16 +1,15 @@
-package kh.com.test4.model;
+package com.kh.test8;
 
 public class Person {
 	private String name;
 
-	public Person() {
-		super();
-		// TODO Auto-generated constructor stub
+	public Person(String name) {
+
+		this.name = name;
 	}
 
-	public Person(String name) {
-		super();
-		this.name = name;
+	public Person() {
+
 	}
 
 	public String getName() {
@@ -21,4 +20,5 @@ public class Person {
 		this.name = name;
 	}
 
+	
 }
