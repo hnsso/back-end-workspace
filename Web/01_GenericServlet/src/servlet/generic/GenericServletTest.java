@@ -21,7 +21,6 @@ public class GenericServletTest extends GenericServlet {
 		out.println("Hello, GenericTest~@@@@@@");
 		out.println("</html></body></h1>");
 	
-//		3.5
 		out.close(); // 자원반납 !! 
 	}
 
