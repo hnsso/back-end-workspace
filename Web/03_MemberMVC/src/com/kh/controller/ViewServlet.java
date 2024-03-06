@@ -33,6 +33,7 @@ public class ViewServlet extends HttpServlet {
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
+		
 		// 2. 바인딩 : list 전체
 		request.setAttribute("list", list);
 				
